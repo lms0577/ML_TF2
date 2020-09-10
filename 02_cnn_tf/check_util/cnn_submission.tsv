@@ -14,6 +14,6 @@ tf.data.Dataset을 이용하여 Input pipeline 만들기	Input pipeline 구현	t
 모델 저장 및 callback 정의	save frequency 지정	모델 파라미터의 저장주기를 정의하다.	Pass
 모델 생성 및 Loss function, Optimizer 정의	Cross entropy loss	cross entropy loss function을 정의한다.	Pass
 모델 생성 및 Loss function, Optimizer 정의	Adam	Adam optimizer를 정의한다.	Pass
-모델 성능 평가	Accuracy	Model의 Accuracy를 평가한다.	Pass
+모델 성능 평가	Accuracy	Model의 Accuracy를 평가한다.	Fail
 모델 성능 평가	model.evaluation()	Model이 잘 학습되었는지 평가한다.	Pass
 transfer learning	레이어 수정	dense layer의 출력 feature 수를 수정한다.	Pass
