@@ -1,2 +1,11 @@
 # ipython notebook checkpoints
 .ipynb_checkpoints
+# ignore folder
+__MACOSX/
+check_util/
+data/
+img/
+train/
+submit/
+# ignore file
+*.zip
