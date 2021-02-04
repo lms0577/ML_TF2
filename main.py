@@ -7,15 +7,12 @@ import tensorflow as tf
 import cv2
 import numpy as np
 from imgaug import augmenters as iaa
-# import myModel
-# from generator import PassengerFaceGenerator
-# from data import getFaceData, getTrainDataset, getValAndTestDataset
 
 #######################################################
 # Set GPU
 #######################################################
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = '0'
+os.environ["CUDA_VISIBLE_DEVICES"] = '1'
 # GPU를 아예 못 보게 하려면: os.environ["CUDA_VISIBLE_DEVICES"]=''
 # GPU 0만 보게 하려면: os.environ["CUDA_VISIBLE_DEVICES"]='0'
 # GPU 1만 보게 하려면: os.environ["CUDA_VISIBLE_DEVICES"]='0'
@@ -26,18 +23,18 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 #######################################################
 gpus = tf.config.experimental.list_physical_devices('GPU')
 print(gpus)
-if gpus:
-  try:
-    tf.config.experimental.set_virtual_device_configuration(
-        gpus[0],
-        [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=1024)])
-  except RuntimeError as e:
-    print(e)
+# if gpus:
+#   try:
+#     tf.config.experimental.set_virtual_device_configuration(
+#         gpus[0],
+#         [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=1024)])
+#   except RuntimeError as e:
+#     print(e)
 
 #######################################################
 # Set hyper parameters
 #######################################################
-input_shape = (254, 254, 3)
+input_shape = (256, 256, 3)
 num_classes = 2
 batch_size = 16
 lr = 0.001
@@ -46,7 +43,7 @@ epoch = 5000
 #######################################################
 # Set parameters
 #######################################################
-data_dir = '/home/fsai3/mask_dataset/1st/Emergency/Mask'
+data_dir = '/home/fssv2/dirty_mnist_dataset/dirty_mnist_2nd'
 
 m_name = 'efficientB7_02'
 
