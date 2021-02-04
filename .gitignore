@@ -7,5 +7,6 @@ data/
 img/
 train/
 submit/
+.idea/
 # ignore file
 *.zip
